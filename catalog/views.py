@@ -7,7 +7,6 @@ from rest_framework.views import APIView
 
 from catalog.filters import ItemFilterset
 from catalog.models import Item
-from catalog.paginators import ItemPaginator
 from catalog.serializers import ItemSerializer
 
 
@@ -16,7 +15,6 @@ class ItemListView(ListAPIView):
     serializer_class = ItemSerializer
     queryset = Item.objects.all().prefetch_related('image_set', 'parameter_set')
     filterset_class = ItemFilterset
-    pagination_class = ItemPaginator
 
 
 class ItemDetailView(RetrieveAPIView):
