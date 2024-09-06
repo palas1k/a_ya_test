@@ -8,10 +8,10 @@ from django.urls import reverse_lazy
 from grappelli.dashboard import modules, Dashboard
 
 
+
 class ProjectDashboard(Dashboard):
 
     def init_with_context(self, context):
-
         request = context['request']
 
         management_models = ('django.contrib.*', 'rest_framework.authtoken.*')

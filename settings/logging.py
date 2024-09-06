@@ -80,7 +80,7 @@ LOGGING['loggers']['management'] = {
 # Django RQ
 # https://github.com/rq/django-rq
 LOGGING['handlers']['rq_console'] = {
-    'class': 'rq.utils.ColorizingStreamHandler',
+    'class': 'rq.logutils.ColorizingStreamHandler',
     'exclude': ('%(levelname)s', '%(asctime)s'),
     'filters': ['require_debug_true'],
     'formatter': 'simple',

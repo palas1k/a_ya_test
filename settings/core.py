@@ -2,8 +2,7 @@
 
 # Main settings for project
 
-from . import BASE_DIR
-from .project import PROJECT_NAME
+from . import BASE_DIR, db
 
 # A list of all the people who get code error notifications
 ADMINS = [('ITCase', 'error@itcase.pro')]
@@ -32,6 +31,10 @@ INSTALLED_APPS = [
     'grappelli',
     'rest_framework',
     'rest_framework.authtoken',
+    'drf_spectacular',
+
+    # project apps
+    'catalog',
 
     # should be last for overridings
     'django.contrib.admin',
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR.joinpath('templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,10 +75,10 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '127.0.0.1',
-        'NAME': PROJECT_NAME,
-        'PORT': 5432,
-        'USER': PROJECT_NAME,
+        'HOST': db.HOST,
+        'NAME': db.NAME,
+        'PORT': db.PORT,
+        'USER': db.USER,
     }
 }
 
@@ -112,7 +115,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 STATIC_ROOT = BASE_DIR / 'static'
-STATIC_URL = f'/{STATIC_ROOT.stem}/'
+STATIC_URL = 'static/'
 
 # Managing upload files
 # https://docs.djangoproject.com/en/dev/topics/files/

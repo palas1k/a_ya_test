@@ -6,6 +6,7 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include, path
 from django.views.generic import TemplateView
+from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
 from filebrowser.sites import site as fb_site
 from rest_framework.authtoken import views as rest_token_views
@@ -23,7 +24,7 @@ urlpatterns = [
             path('grappelli/', include('grappelli.urls')),
 
             # django
-            path('', admin.site.urls),
+            path('', admin.site.urls, name="admin"),
         ])),
 
     # rest
@@ -31,6 +32,9 @@ urlpatterns = [
          include([
              path('token/', rest_token_views.obtain_auth_token),
          ])),
+    path('api/v1/catalog/', include('catalog.urls')),
+    path('api/v1/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/v1/swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
