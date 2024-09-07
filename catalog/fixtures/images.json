@@ -1,0 +1,32 @@
+[
+    {
+        "model": "catalog.image",
+        "pk": 1,
+        "fields": {
+            "item": 1,
+            "file": "image1.jpg",
+            "caption": "Image 1 caption",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.image",
+        "pk": 2,
+        "fields": {
+            "item": 1,
+            "file": "image2.jpg",
+            "caption": "Image 2 caption",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.image",
+        "pk": 3,
+        "fields": {
+            "item": 2,
+            "file": "image3.jpg",
+            "caption": "Image 3 caption",
+            "sort_order": "ASC"
+        }
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "model": "catalog.parameter",
+        "pk": 1,
+        "fields": {
+            "item": 1,
+            "name": "Color",
+            "value": "Red",
+            "price": "5.00",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.parameter",
+        "pk": 2,
+        "fields": {
+            "item": 1,
+            "name": "Color",
+            "value": "Blue",
+            "price": "10.00",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.parameter",
+        "pk": 3,
+        "fields": {
+            "item": 2,
+            "name": "Size",
+            "value": "Large",
+            "price": "15.00",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.parameter",
+        "pk": 4,
+        "fields": {
+            "item": 2,
+            "name": "Size",
+            "value": "Small",
+            "price": "5.00",
+            "sort_order": "ASC"
+        }
+    }
+]

@@ -3,6 +3,11 @@
 ## Запуск
 
 1. settings/db.py ввести свои данные для Базы данных
+2. запустить redis на компьютере
+3. python manage.py createuser созздание админа для входа в админку
+4. python manage.py runserver
+5. тестовые данные
+python manage.py loaddata catalog/fixtures/items.json catalog/fixtures/images.json catalog/fixtures/parameters.json
 
 
 ## Тестовое задание

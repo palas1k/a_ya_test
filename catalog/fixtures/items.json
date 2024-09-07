@@ -1,0 +1,22 @@
+[
+    {
+        "model": "catalog.item",
+        "pk": 1,
+        "fields": {
+            "name": "Test Item 1",
+            "description": "This is a test item",
+            "base_price": "10.00",
+            "sort_order": "ASC"
+        }
+    },
+    {
+        "model": "catalog.item",
+        "pk": 2,
+        "fields": {
+            "name": "Test Item 2",
+            "description": "This is another test item",
+            "base_price": "20.00",
+            "sort_order": "ASC"
+        }
+    }
+]
